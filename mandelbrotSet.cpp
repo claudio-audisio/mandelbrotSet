@@ -7,6 +7,9 @@
 #include "raylib.h"
 #include "rlgl.h"
 
+using namespace std;
+
+
 Board board;
 Shader shader;
 Font font;
@@ -74,8 +77,8 @@ Vector2 complexToScreen(const Vector2 cPoint) {
 void launchAutoZoom() {
 	HideCursor();
 	SetMousePosition(WIDTH / 2, HEIGHT / 2);
-	mx = pointsOfInterest[2].x;
-	my = pointsOfInterest[2].y;
+	mx = pointsOfInterest[4].x;
+	my = pointsOfInterest[4].y;
 	autoZoom = 1;
 }
 

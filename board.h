@@ -2,11 +2,12 @@
 #include <chrono>
 #include <cmath>
 #include <raylib.h>
-
+#include "cl_time.h"
 #include "constants.h"
 #include "function.h"
-#include "utils.h"
 
+
+using namespace std;
 
 class Board {
 	float width, height;
@@ -48,7 +49,7 @@ public:
 			UpdateTexture(texture, pixels);
 			DrawTexture(texture, 0, 0, WHITE);
 
-			const auto time = getElapsedMillis(start);
+			const auto time = cl::getElapsedMillis(start);
 			cout << time << " ms" << endl;
 
 			haveToDraw = false;
